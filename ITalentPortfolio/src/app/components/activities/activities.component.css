@@ -1,0 +1,31 @@
+.card {
+    height: 15vh;
+}
+
+.zoom:hover {
+    transform: scale(1.15);
+}
+
+.activityContainer {
+    width: 50%;
+}
+
+canvas {
+    width: 20%;
+}
+
+.category, .blue {
+    color: blue;
+}
+
+mat-divider {
+    border-top-color: red;
+}
+
+.logo {
+    height: 15vh;
+}
+
+.marginTop {
+    margin-top: 5%;
+}

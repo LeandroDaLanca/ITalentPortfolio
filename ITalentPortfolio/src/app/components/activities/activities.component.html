@@ -1,0 +1,497 @@
+<div class="d-flex align-items-center flex-column marginTop">
+    <div class="w-25 d-flex justify-content-center">
+        <h1>Totaal: {{total}} Extra: {{amountExtra}}</h1>
+    </div>
+    <div class="w-25">
+        <canvas baseChart
+        [data]="doughnutChartData"
+        [labels]="doughnutChartLabels"
+        [chartType]="doughnutChartType"
+        (chartClick)="onChartClicked($event)">
+    </canvas>
+    </div>
+</div>
+<div class="d-flex justify-content-center mt-5 min-vh-100">
+    <div class="activityContainer d-flex flex-column">
+        <div *ngIf="seminars" class="w-100 d-flex flex-column">
+            <div class="d-flex justify-content-center">
+                <h1 class="category">Seminaries</h1>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="w-100 d-flex flex-column align-items-center mb-3">
+                <div class="d-flex flex-column align-items-center my-5">
+                    <h2>Locatie: Online</h2>
+                    <h2>Uren: 3</h2>
+                    <mat-card class="card rounded-pill zoom d-flex align-items-center flex-column p-0">
+                        <div class="d-flex justify-content-start align-items-center">
+                            <div>
+                                <img class="logo" src="../../../assets/craftworkz.png" alt="Craftworkz logo"/>
+                            </div>
+                            <div class="d-flex align-items-center flex-column">
+                                <h1 class="blue">Craftworkz - From idea to solution - 23/02/2021</h1>
+                                <div class="d-flex justify-content-center w-75 mt-2">
+                                    <div class="w-100">
+                                        <p>Hoe van idee/probleem tot product/oplossing komen? Dit seminarie beschreef hiervoor een driestappenplan. De stappen waren: “design thinking”, “lean thinking” en het product uitwerken op een agile manier.</p>
+                                    </div>
+                            
+                                </div>
+                            </div>
+                        </div>
+                    </mat-card>
+                </div>
+                <div class="d-flex flex-column align-items-center my-5">
+                    <h2>Locatie: Online</h2>
+                    <h2>Uren: 3</h2>
+                    <mat-card class="card rounded-pill zoom d-flex align-items-center flex-column p-0">
+                        <div class="d-flex justify-content-start align-items-center">
+                            <div>
+                                <img class="logo" src="../../../assets/craftworkz.png" alt="Craftworkz logo"/>
+                            </div>
+                            <div class="d-flex align-items-center flex-column">
+                                <h3 class="blue">Craftworkz - Design Sprint: Solve big problems and test new ideas in just 5 days - 02/03/2021</h3>
+                                <div class="d-flex justify-content-center w-75 mt-2">
+                                    <div class="w-100">
+                                        <p>Wat is een design sprint en hoe wordt deze uitgevoerd (bij Craftworkz)? Ze volgen 5 stappen: understand, sketch, decide, prototype en test. Om dit seminarie af te sluiten is er een workshop gehouden waarin de deelnemers in teams zelf zo een design sprint uitwerkte.</p>
+                                    </div>
+                            
+                                </div>
+                            </div>
+                        </div>
+                    </mat-card>
+                </div>
+                <div class="d-flex flex-column align-items-center my-5">
+                    <h2>Locatie: Online</h2>
+                    <h2>Uren: 3</h2>
+                    <mat-card class="card rounded-pill zoom d-flex align-items-center flex-column p-0">
+                        <div class="d-flex justify-content-start align-items-center">
+                            <div>
+                                <img class="logo" src="../../../assets/refleqt.jpg" alt="Refleqt logo"/>
+                            </div>
+                            <div class="d-flex align-items-center flex-column">
+                                <h3 class="blue">Refleqt - Test automation met Cucumber en Selenium - 09/03/2021</h3>
+                                <div class="d-flex justify-content-center w-75 mt-2">
+                                    <div class="w-100">
+                                        <p>Uitleg Cucumber en Selenium, hands-on zelf testen schrijven met Cucumber. Link met Gherkin , een taal waarvan de syntax te begrijpen is door zowel business als programmeurs.</p>
+                                    </div>
+                            
+                                </div>
+                            </div>
+                        </div>
+                    </mat-card>
+                </div>
+                <div class="d-flex flex-column align-items-center my-5">
+                    <h2>Locatie: Online</h2>
+                    <h2>Uren: 3</h2>
+                    <mat-card class="card rounded-pill zoom d-flex align-items-center flex-column p-0">
+                        <div class="d-flex justify-content-start align-items-center">
+                            <div>
+                                <img class="logo" src="../../../assets/brainjar.png" alt="Brainjar logo"/>
+                            </div>
+                            <div class="d-flex align-items-center flex-column">
+                                <h3 class="blue">Brainjar - AI Anyone can do it! - 16/03/2021</h3>
+                                <div class="d-flex justify-content-center w-75 mt-2">
+                                    <div class="w-100">
+                                        <p>Uitleg en historiek van AI. Basis van supervised learning en unsupervised learning Specifieke cases bekijken die Brainjar heeft verwezenlijkt.</p>
+                                    </div>
+                            
+                                </div>
+                            </div>
+                        </div>
+                    </mat-card>
+                </div>
+                <div class="d-flex flex-column align-items-center my-5">
+                    <h2>Locatie: Online</h2>
+                    <h2>Uren: 3</h2>
+                    <mat-card class="card rounded-pill zoom d-flex align-items-center flex-column p-0">
+                        <div class="d-flex justify-content-start align-items-center">
+                            <div>
+                                <img class="logo" src="../../../assets/wheelhouse.png" alt="Wheelhouse logo"/>
+                            </div>
+                            <div class="d-flex align-items-center flex-column">
+                                <h3 class="blue">Weelhouse - Jamstack - 23/03/2021</h3>
+                                <div class="d-flex justify-content-center w-75 mt-2">
+                                    <div class="w-100">
+                                        <p>Opkomst van Jamstack vanwege evolutie van websites, niet langer enkel statische data. Wat hout Jamstack in en wat zijn de best practices?</p>
+                                    </div>
+                            
+                                </div>
+                            </div>
+                        </div>
+                    </mat-card>
+                </div>
+                <div class="d-flex flex-column align-items-center my-5">
+                    <h2>Locatie: Online</h2>
+                    <h2>Uren: 3</h2>
+                    <mat-card class="card rounded-pill zoom d-flex align-items-center flex-column p-0">
+                        <div class="d-flex justify-content-start align-items-center">
+                            <div>
+                                <img class="logo" src="../../../assets/brightest.jpg" alt="Brightest logo"/>
+                            </div>
+                            <div class="d-flex align-items-center flex-column">
+                                <h3 class="blue">Brightest - ElasticSearch - 30/03/2021</h3>
+                                <div class="d-flex justify-content-center w-75 mt-2">
+                                    <div class="w-100">
+                                        <p>Uitleg ElasticSearch, nadruk dat het niet enkel zoeken naar top x resultaten is. Vergemakkelijking visualisatie en rapportage, filteren, voorspellen, opsporen van abnormaliteiten …</p>
+                                    </div>
+                            
+                                </div>
+                            </div>
+                        </div>
+                    </mat-card>
+                </div>
+                <div class="d-flex flex-column align-items-center my-5">
+                    <h2>Locatie: Online</h2>
+                    <h2>Uren: 3</h2>
+                    <mat-card class="card rounded-pill zoom d-flex align-items-center flex-column p-0">
+                        <div class="d-flex justify-content-start align-items-center">
+                            <div>
+                                <img class="logo" src="../../../assets/refleqt.jpg" alt="Refleqt logo"/>
+                            </div>
+                            <div class="d-flex align-items-center flex-column">
+                                <h3 class="blue">Refleqt - Test automation Cypress  - 20/04/2021</h3>
+                                <div class="d-flex justify-content-center w-75 mt-2">
+                                    <div class="w-100">
+                                        <p>Dit seminarie ging over wat Cypress is en hoe het gebruikt wordt. Wat is een end to end testing framework? Hands-on voorbeeld als afsluiter. </p>
+                                    </div>
+                            
+                                </div>
+                            </div>
+                        </div>
+                    </mat-card>
+                </div>
+                <div class="d-flex flex-column align-items-center my-5">
+                    <h2>Locatie: Online</h2>
+                    <h2>Uren: 3</h2>
+                    <mat-card class="card rounded-pill zoom d-flex align-items-center flex-column p-0">
+                        <div class="d-flex justify-content-start align-items-center">
+                            <div>
+                                <img class="logo" src="../../../assets/realdolmen2.jpg" alt="Realdolmen logo"/>
+                            </div>
+                            <div class="d-flex align-items-center flex-column">
+                                <h3 class="blue">Realdolmen - GDPR en security  - 27/04/2021</h3>
+                                <div class="d-flex justify-content-center w-75 mt-2">
+                                    <div class="w-100">
+                                        <p>Wat is GDPR en wat zijn de gevolgen moest dit geschonden worden. Voorbeelden van grote bedrijven en nog grotere boetes.</p>
+                                    </div>
+                            
+                                </div>
+                            </div>
+                        </div>
+                    </mat-card>
+                </div>
+                <div class="d-flex flex-column align-items-center my-5">
+                    <h2>Locatie: Online</h2>
+                    <h2>Uren: 3</h2>
+                    <mat-card class="card rounded-pill zoom d-flex align-items-center flex-column p-0">
+                        <div class="d-flex justify-content-start align-items-center">
+                            <div>
+                                <img class="logo" src="../../../assets/ordina.png" alt="Ordina logo"/>
+                            </div>
+                            <div class="d-flex align-items-center flex-column">
+                                <h3 class="blue">Ordina - IT security & data privacy awareness  - 11/05/2021</h3>
+                                <div class="d-flex justify-content-center w-75 mt-2">
+                                    <div class="w-100">
+                                        <p>Uitleg over GDPR en security in het algemeen, enkele soorten aanvallen en hoe hierop voor te bereiden. Een blik op de effectieve wetten.</p>
+                                    </div>
+                            
+                                </div>
+                            </div>
+                        </div>
+                    </mat-card>
+                </div>
+                <div class="d-flex flex-column align-items-center my-5">
+                    <h2>Locatie: PXL, Elfde-Liniestraat 24, gebouw G, lokaal G516</h2>
+                    <h2>Uren: 3</h2>
+                    <mat-card class="card rounded-pill zoom d-flex align-items-center flex-column p-0">
+                        <div class="d-flex justify-content-start align-items-center">
+                            <div>
+                                <img class="logo" src="../../../assets/itlicious.png" alt="ITLicious logo"/>
+                            </div>
+                            <div class="d-flex align-items-center flex-column">
+                                <h3 class="blue">IT Licious - Flutter en use case  - 17/11/2021</h3>
+                                <div class="d-flex justify-content-center w-75 mt-2">
+                                    <div class="w-100">
+                                        <p>Intro tot Flutter en hands-on workshop. Uitleg over waarom en hoe de VRT besloten heeft om steeds meer React Native te vervangen door Flutter.</p>
+                                    </div>
+                            
+                                </div>
+                            </div>
+                        </div>
+                    </mat-card>
+                </div>
+                <div class="d-flex flex-column align-items-center my-5">
+                    <h2>Locatie: PXL, Elfde-Liniestraat 24, gebouw G, lokaal G516</h2>
+                    <h2>Uren: 3</h2>
+                    <mat-card class="card rounded-pill zoom d-flex align-items-center flex-column p-0">
+                        <div class="d-flex justify-content-start align-items-center">
+                            <div>
+                                <img class="logo" src="../../../assets/accenture.jpg" alt="Accenture logo"/>
+                            </div>
+                            <div class="d-flex align-items-center flex-column">
+                                <h3 class="blue">Accenture - Cloud native development  - 01/12/2021</h3>
+                                <div class="d-flex justify-content-center w-75 mt-2">
+                                    <div class="w-100">
+                                        <p>Wat is cloud native development en wat zijn de voordelen. Werken met Docker en AWS. Hands-on lab, werken met Docker en AWS ECR, ECS.</p>
+                                    </div>
+                            
+                                </div>
+                            </div>
+                        </div>
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="extra || innovation" class="w-100 d-flex flex-column">
+            <div class="d-flex justify-content-center">
+                <h1 class="category">Innovatieroute</h1>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="w-100 d-flex flex-column align-items-center mb-3">
+                <div *ngIf="innovation" class="w-100 d-flex flex-column align-items-center mb-3">
+                    <div class="d-flex flex-column align-items-center my-5">
+                        <h2>Locatie: PXL, Elfde-Liniestraat 24, gebouw B, lokaal B311</h2>
+                        <h2>Uren: 25</h2>
+                        <mat-card class="card rounded-pill zoom d-flex align-items-center flex-column p-0">
+                            <div class="d-flex justify-content-start align-items-center">
+                                <div>
+                                    <img class="logo" src="../../../assets/pxl.jpg" alt="PXL logo"/>
+                                </div>
+                                <div class="d-flex align-items-center flex-column">
+                                    <h1 class="blue">Innovatieroute AI - 30/09/2021 - 21/10/2021</h1>
+                                    <div class="d-flex justify-content-center w-75 mt-2">
+                                        <div class="w-100">
+                                            <p>3 sessies waarin steeds een ander bedrijf een introductie geeft tot een onderwerp dat te maken heeft met AI. Deep learning is behandeld door Brainjar, computervisie door Mediaan en  Fast AI v2 door Cegeka. Iedere sessie start met een theoretisch deel en rondt af met hands-on voorbeelden.</p>
+                                        </div>
+                                
+                                    </div>
+                                </div>
+                            </div>
+                        </mat-card>
+                    </div>
+                    <div class="d-flex flex-column align-items-center my-5">
+                        <h2>Locatie: online</h2>
+                        <h2>Uren: 25</h2>
+                        <mat-card class="card rounded-pill zoom d-flex align-items-center flex-column p-0">
+                            <div class="d-flex justify-content-start align-items-center">
+                                <div>
+                                    <img class="logo" src="../../../assets/pxl.jpg" alt="PXL logo"/>
+                                </div>
+                                <div class="d-flex align-items-center flex-column">
+                                    <h3 class="blue">Hackathon - PXL-Research en studenten Ergotherapie voor Sint-Oda - 15/02/2022 - 16/02/2022</h3>
+                                    <div class="d-flex justify-content-center w-75 mt-2">
+                                        <div class="w-100">
+                                            <p>Een puzzelspelletje maken in een groep van 6 studenten met behulp van Unity met als doelgroep bewoners van Sint-Oda. Dit zijn mensen met complexe beperkingen dus het spelletje moet in deze gedachte gemaakt worden.</p>
+                                        </div>
+                                
+                                    </div>
+                                </div>
+                            </div>
+                        </mat-card>
+                    </div>
+                </div>
+                <div *ngIf="extra || innovation" class="w-100 d-flex flex-column align-items-center mb-3">
+                    <div class="d-flex flex-column align-items-center my-5">
+                        <h2>EXTRA</h2>
+                        <h2>Locatie: online</h2>
+                        <h2>Duur: 10 uur</h2>
+                        <mat-card class="card rounded-pill zoom d-flex align-items-center flex-column p-0">
+                            <div class="d-flex justify-content-start align-items-center">
+                                <div>
+                                    <img class="logo" src="../../../assets/google.jpg" alt="Google logo"/>
+                                </div>
+                                <div class="d-flex align-items-center flex-column">
+                                    <h4 class="blue">Google Hash Code 2021 - 15/02/2022 - 25/02/2021</h4>
+                                    <div class="d-flex justify-content-center w-75 mt-2">
+                                        <div class="w-100">
+                                            <p class="h6 small">Maken en optimaliseren van een algoritme voor het regelen van verkeerslichten zodat zo veel mogelijk auto's hun einddoel bereiken (input is routes van auto's). Punten worden verdiend aan de hand van hoe efficiënt het algoritme is en wordt gemeten aan de correctheid van het resultaat.</p>
+                                        </div>
+                                
+                                    </div>
+                                </div>
+                            </div>
+                        </mat-card>
+                    </div>
+                    <div class="d-flex flex-column align-items-center my-5">
+                        <h2>EXTRA</h2>
+                        <h2>Locatie: online</h2>
+                        <h2>Duur: 30 uur</h2>
+                        <mat-card class="card rounded-pill zoom d-flex align-items-center flex-column p-0">
+                            <div class="d-flex justify-content-start align-items-center">
+                                <div>
+                                    <img class="logo" src="../../../assets/unity.jpg" alt="Unity logo"/>
+                                </div>
+                                <div class="d-flex align-items-center flex-column">
+                                    <h4 class="blue">Unity Learn - 23/06/2021 - 28/06/2021, 17/02/2022 - 23/02/2022</h4>
+                                    <div class="d-flex justify-content-center w-75 mt-2">
+                                        <div class="w-100">
+                                            <p class="h6 small">Unity Learn is het officiële digitale leerplatform van Unity. Er zijn hier veel tutorials en voorbeeldprojecten te vinden om een makkelijke stap te zetten in de wereld van game development. Ik heb verschillende voorbeeldprojecten gemaakt aan de hand van de tutorials die alleenstaand of in een overkoepelende “pathway” te vinden zijn.</p>
+                                        </div>
+                                
+                                    </div>
+                                </div>
+                            </div>
+                        </mat-card>
+                    </div>
+                    <div class="d-flex flex-column align-items-center my-5">
+                        <h2>EXTRA</h2>
+                        <h2>Locatie: online</h2>
+                        <h2>Duur: 8 uur</h2>
+                        <mat-card class="card rounded-pill zoom d-flex align-items-center flex-column p-0">
+                            <div class="d-flex justify-content-start align-items-center">
+                                <div>
+                                    <img class="logo" src="../../../assets/google.jpg" alt="Google logo"/>
+                                </div>
+                                <div class="d-flex align-items-center flex-column">
+                                    <h4 class="blue">Google Hash Code 2022 - 24/02/2022</h4>
+                                    <div class="d-flex justify-content-center w-75 mt-2">
+                                        <div class="w-100">
+                                            <p class="h6 small">Maken en optimaliseren van een algoritme voor het zo efficiënt mogelijk beheren van resources. Er zijn projecten die voor een bepaalde datum af moeten en de resources zijn een aantal ontwikkelaars met verschillende skills die op de juiste projecten moeten gezet worden om zoveel mogelijk projecten voor hun deadline af te werken. De Ontwikkelaars kunnen ook hun skills verbeteren door projecten uit te voeren.</p>
+                                        </div>
+                                
+                                    </div>
+                                </div>
+                            </div>
+                        </mat-card>
+                    </div>
+                    <div class="d-flex flex-column align-items-center my-5">
+                        <h2>EXTRA</h2>
+                        <h2>Locatie: online</h2>
+                        <h2>Duur: 6 uur</h2>
+                        <mat-card class="card rounded-pill zoom d-flex align-items-center flex-column p-0">
+                            <div class="d-flex justify-content-start align-items-center">
+                                <div>
+                                    <img class="logo" src="../../../assets/google.jpg" alt="Google logo"/>
+                                </div>
+                                <div class="d-flex align-items-center flex-column">
+                                    <h1 class="blue">Google Code Jam Qualifications 2022 - 01/04/2022</h1>
+                                    <div class="d-flex justify-content-center w-75 mt-2">
+                                        <div class="w-100">
+                                            <p>Een aantal algoritmische puzzels waarvoor punten te verdienen zijn indien opgelost. Ik heb enkel meegedaan aan de kwalificaties en heb 3 van de 5 problemen opgelost.</p>
+                                        </div>
+                                
+                                    </div>
+                                </div>
+                            </div>
+                        </mat-card>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="personalDevelopment" class="w-100 d-flex flex-column">
+            <div class="d-flex justify-content-center">
+                <h1 class="category">Persoonlijke ontwikkeling</h1>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="w-100 d-flex flex-column align-items-center mb-3">
+                <div class="d-flex flex-column align-items-center my-5">
+                    <h2>Locatie: online</h2>
+                    <h2>Uren: 26</h2>
+                    <mat-card class="card rounded-pill zoom d-flex align-items-center flex-column p-0">
+                        <div class="d-flex justify-content-start align-items-center">
+                            <div>
+                                <img class="logo" src="../../../assets/pxl.jpg" alt="PXL logo"/>
+                            </div>
+                            <div class="d-flex align-items-center flex-column">
+                                <h1 class="blue">Projectweek - 15/02/2021 - 19/02/2021</h1>
+                                <div class="d-flex justify-content-center w-75 mt-2">
+                                    <div class="w-100">
+                                        <p class="h6 small">Een week van seminaries en workshops om de student klaar te stomen om te starten aan zowel het Research Project als het portfolio voor I-Talent. Behandelde zaken zijn leren schrijven van academische verslagen, leren omgaan en toepassen van feedback en leren te reflecteren. Alsook is er een onderdeel teambuilding met het team waarmee het Research Project gemaakt zal worden.</p>
+                                    </div>
+                            
+                                </div>
+                            </div>
+                        </div>
+                    </mat-card>
+                </div>
+                <div class="d-flex flex-column align-items-center my-5">
+                    <h2>Locatie: online</h2>
+                    <h2>Uren: 2</h2>
+                    <mat-card class="card rounded-pill zoom d-flex align-items-center flex-column p-0">
+                        <div class="d-flex justify-content-start align-items-center">
+                            <div>
+                                <img class="logo" src="../../../assets/pxl.jpg" alt="PXL logo"/>
+                            </div>
+                            <div class="d-flex align-items-center flex-column">
+                                <h1 class="blue">POP-sessie - Brein aan het werk! Niet storen! - 09/03/2021</h1>
+                                <div class="d-flex justify-content-center w-75 mt-2">
+                                    <div class="w-100">
+                                        <p>Een sessie over het ontdekken hoe afhankelijk we zijn van digitale zaken en hoe we hier verantwoordelijk(er) mee kunnen omgaan. Verder is er onderzocht of we onze prioriteiten goed stellen via de Eisenhower-matrix.</p>
+                                    </div>
+                            
+                                </div>
+                            </div>
+                        </div>
+                    </mat-card>
+                </div>
+                <div class="d-flex flex-column align-items-center my-5">
+                    <h2>Locatie: online</h2>
+                    <h2>Uren: 2</h2>
+                    <mat-card class="card rounded-pill zoom d-flex align-items-center flex-column p-0">
+                        <div class="d-flex justify-content-start align-items-center">
+                            <div>
+                                <img class="logo" src="../../../assets/pxl.jpg" alt="PXL logo"/>
+                            </div>
+                            <div class="d-flex align-items-center flex-column">
+                                <h1 class="blue">POP-sessie (Veer)Krachtige teams - 23/03/2021</h1>
+                                <div class="d-flex justify-content-center w-75 mt-2">
+                                    <div class="w-100">
+                                        <p>Hoe zich gedragen in een team? Deze sessie ging over hoe men zich zowel individueel als ten opzichte van anderen moet gedragen in een team. De focus werd ook gelegd op herkennen en inspelen op eigen sterktes en die van je teamleden. </p>
+                                    </div>
+                            
+                                </div>
+                            </div>
+                        </div>
+                    </mat-card>
+                </div>
+                <div class="d-flex flex-column align-items-center my-5">
+                    <h2>Locatie: orda 7, verdieping 1 (ISpace)</h2>
+                    <h2>Uren: 3</h2>
+                    <mat-card class="card rounded-pill zoom d-flex align-items-center flex-column p-0">
+                        <div class="d-flex justify-content-start align-items-center">
+                            <div>
+                                <img class="logo" src="../../../assets/pxl.jpg" alt="PXL logo"/>
+                            </div>
+                            <div class="d-flex align-items-center flex-column">
+                                <h1 class="blue">POP-sessie My team and I - 23/10/2021</h1>
+                                <div class="d-flex justify-content-center w-75 mt-2">
+                                    <div class="w-100">
+                                        <p>In deze sessie is aan de hand van de piramide van Lencioni gewezen op welke eigenschappen het belangrijkst zijn in een team. Ook is er via het Tuckman model aangekaart op welke manier een team ontwikkelt en aan teambuilding doet.</p>
+                                    </div>
+                            
+                                </div>
+                            </div>
+                        </div>
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="studentEngagement" class="d-flex flex-column">
+            <div class="d-flex justify-content-center">
+                <h1 class="category">Student engagement</h1>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="w-100 d-flex flex-column align-items-center mb-3">
+                <div class="d-flex flex-column align-items-center my-5">
+                    <h2>Locatie: online</h2>
+                    <h2>Uren: 13</h2>
+                    <mat-card class="card rounded-pill zoom d-flex align-items-center flex-column p-0">
+                        <div class="d-flex justify-content-start align-items-center">
+                            <div>
+                                <img class="logo" src="../../../assets/foto.jpg" alt="Foto"/>
+                            </div>
+                            <div class="d-flex align-items-center flex-column">
+                                <h1 class="blue">Summerbuddy - 09/08/2021 - 21/08/2021</h1>
+                                <div class="d-flex justify-content-center w-75 mt-2">
+                                    <div class="w-100">
+                                        <p>Bijles geven aan studenten die herexamens hebben in de zomervakantie voor het vak Java Essentials.</p>
+                                    </div>
+                            
+                                </div>
+                            </div>
+                        </div>
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

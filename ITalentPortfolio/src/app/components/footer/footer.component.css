@@ -1,0 +1,17 @@
+.socialsText {
+    color: white;
+}
+
+.fa-brands {
+    color: #FF7F00;
+    height: 1em;
+    line-height: 1;
+}
+
+.iconLink {
+    font-size: 40px;
+    line-height: 40px;
+    width: 60px;
+    height: 60px;
+    margin: 0 5px;
+}

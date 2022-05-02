@@ -1,0 +1,14 @@
+.footerContainer {
+    height: 15vw;
+    min-height: 170px;
+    background: linear-gradient(180deg, #4E20CE 11%, #6C21D4 100%);
+    width: 100vw;
+    max-width: 100%;
+}
+
+app-navbar {
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+}
