@@ -7,6 +7,10 @@
     width: 20%;
 }
 
-.test {
+.pic {
     margin-right: 20%;
+}
+
+.padding {
+    padding: 64px;
 }
