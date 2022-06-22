@@ -5,3 +5,9 @@
 .scaleDown {
     width: 50%;
 }
+
+@media screen and (max-width: 900px) {
+    img {
+        width: 80%;
+    }
+}
